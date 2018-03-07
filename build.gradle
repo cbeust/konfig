@@ -1,0 +1,41 @@
+buildscript {
+    ext.kotlinVersion = '1.2.30'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+version '0.1'
+group 'com.beust.konfig'
+
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+        "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion",
+        "org.jetbrains.kotlin:kotlin-compiler:$kotlinVersion",
+        "org.jetbrains.kotlin:kotlin-script-runtime:$kotlinVersion",
+        "org.jetbrains.kotlin:kotlin-script-util:$kotlinVersion"
+
+    testCompile "org.testng:testng:6.14.3"
+}
+
+mainClassName = 'com.beust.konfig.MainKt'
+
+run {
+//    args = ['server', 'config.yml']
+}
