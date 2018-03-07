@@ -1,10 +1,11 @@
 
 import com.beust.kobalt.plugin.application.application
 import com.beust.kobalt.plugin.packaging.assemble
+import com.beust.kobalt.plugin.publish.bintray
 import com.beust.kobalt.project
 
 object Version {
-    val main = "0.1"
+    val main = "1.0.0"
     val kotlin = "1.2.10"
 }
 
@@ -36,4 +37,6 @@ val p = project {
     application {
         mainClass = "com.beust.konfig.MainKt"
     }
+
+    bintray {}
 }
