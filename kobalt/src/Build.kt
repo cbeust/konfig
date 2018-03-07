@@ -38,5 +38,7 @@ val p = project {
         mainClass = "com.beust.konfig.MainKt"
     }
 
-    bintray {}
+    bintray {
+        publish = true
+    }
 }
